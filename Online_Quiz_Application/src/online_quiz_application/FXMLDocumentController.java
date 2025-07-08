@@ -4,6 +4,7 @@
  */
 package online_quiz_application;
 
+import constant.AdminEmailPassword;
 import java.net.URL;
 import static java.time.Clock.system;
 import java.util.ResourceBundle;
@@ -47,6 +48,14 @@ public class FXMLDocumentController implements Initializable {
     private void loginadmin(ActionEvent event) {
         String email=adminemail.getText();
         String password = adminpass.getText();
+        if (email.trim().equalsIgnoreCase(AdminEmailPassword.email) && 
+                password.trim().equalsIgnoreCase(AdminEmailPassword.password))
+            
+             System.out.println("Admin Login Success.");
+        else{
+         System.out.println("Admin Login Faild.");
+        }
+             
         System.out.println(email+"----->" + password);
         
         System.out.println("AdminLoginController.loginAdmin()");
