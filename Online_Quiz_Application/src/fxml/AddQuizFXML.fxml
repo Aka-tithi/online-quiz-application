@@ -1,42 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="928.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="controllers.AddQuizFXMLController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="655.0" style="-fx-background-color: #FFFCFB;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AddQuizFXMLController">
    <children>
-      <VBox layoutX="30.0" layoutY="118.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" prefHeight="530.0" prefWidth="625.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-cursor: #E195AB;" text="Add A New Quiz" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+            <Separator prefHeight="35.0" prefWidth="575.0" />
+            <HBox prefHeight="38.0" prefWidth="575.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add A New Quiz">
-                     <font>
-                        <Font size="29.0" />
-                     </font>
+                  <TextField fx:id="quizTitle" prefHeight="35.0" prefWidth="576.0" promptText="Enter Quiz Title" style="-fx-alignment: #E195AB;">
                      <HBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
-                  </Text>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="setQuizTitleButton" lineSpacing="5.0" mnemonicParsing="false" onAction="#setQuizTitle" style="-fx-background-color: #E195AB;" text="OK">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Separator prefHeight="26.0" prefWidth="626.0" />
+            <TextField fx:id="questions" prefHeight="35.0" prefWidth="575.0" promptText="Enter Question">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <Separator prefHeight="15.0" prefWidth="575.0" />
+            <TextField fx:id="option1" prefHeight="35.0" prefWidth="575.0" promptText="Option 1" style="-fx-alignment: #E195AB;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="option2" prefHeight="35.0" prefWidth="575.0" promptText="Option 2" style="-fx-alignment: #E195AB;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="option3" prefHeight="35.0" prefWidth="575.0" promptText="Option 3" style="-fx-alignment: #E195AB;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="option4" prefHeight="35.0" prefWidth="575.0" promptText="Option 4" style="-fx-alignment: #E195AB;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <Separator prefHeight="15.0" prefWidth="575.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #E195AB;" text="Select A Right Answer">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0" spacing="50.0">
+               <children>
+                  <RadioButton fx:id="radioOption1" alignment="BOTTOM_RIGHT" mnemonicParsing="false" style="-fx-alignment: #E195AB;" text="Option 1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="radioOption2" alignment="BOTTOM_RIGHT" mnemonicParsing="false" text="Option 2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="radioOption3" alignment="BOTTOM_RIGHT" mnemonicParsing="false" text="Option 3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="radioOption4" alignment="BOTTOM_RIGHT" mnemonicParsing="false" text="Option 4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></RadioButton>
                </children>
                <VBox.margin>
-                  <Insets top="50.0" />
+                  <Insets left="5.0" right="5.0" />
                </VBox.margin>
             </HBox>
-            <Separator prefWidth="200.0" />
-            <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0" prefHeight="40.0" prefWidth="600.0">
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="616.0" spacing="20.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Quiz Title">
+                  <Button fx:id="addNextQuestion" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#addNextQuestion" style="-fx-background-color: #E195AB;" text="Add Next Question" textAlignment="CENTER" textFill="#000000fc">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
                      <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="submitQuiz" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#submitQuiz" style="-fx-background-color: #0A400C;" text="Submit Quiz" textAlignment="CENTER" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
                </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
             </HBox>
          </children>
       </VBox>

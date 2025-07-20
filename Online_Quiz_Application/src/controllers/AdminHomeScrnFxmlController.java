@@ -27,15 +27,15 @@ public class AdminHomeScrnFxmlController implements Initializable {
     @FXML
     private Tab AddStudentTab;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         try{
             Parent node = FXMLLoader.load(getClass().getResource("/fxml/AddQuizFXML.fxml"));
         AddQuizTAb.setContent(node);
+        
+        Parent studentTabNode = FXMLLoader.load(getClass().getResource("/fxml/AdminStudentTabFXML.fxml"));
+        AddStudentTab.setContent(studentTabNode);
         }
         catch(Exception e){
             e.printStackTrace();   
